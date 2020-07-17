@@ -13,3 +13,7 @@ c) O(n)
 Because this function is dependent on 'n' and decreases by n-1 this is a linear function. for example if n = 10 bunnies then this function will run 10 times.
 
 ## Exercise II
+
+runtime for my algorithm O(n)
+
+starting from the bottom of the building iterate through the floors until the first egg is broken, this will give us 'f'. Because this is a linear function the runtime is O(n).
