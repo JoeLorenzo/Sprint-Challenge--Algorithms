@@ -95,7 +95,25 @@ class SortingRobot:
     def sort(self):
         # given the robots basic functionality and the ability to swap this
         # lends itself to a bubble sort type of solution.
-        pass
+        self.set_light_off() 
+        while self.light_is_on() == False:
+            self.set_light_on()
+
+            while self.can_move_right():
+                self.swap_item()
+                self.move_right()
+                #check if swap is needed
+                if self.compare_item() == 1:
+                    self.swap_item()
+                    self.set_light_off()            
+                    
+                self.move_left() 
+                self.swap_item()
+                self.move_right()
+                
+            while self.can_move_left() == True:
+                self.move_left()
+    
 
 
 if __name__ == "__main__":
